@@ -1,1 +1,0 @@
-# snakefat-map
