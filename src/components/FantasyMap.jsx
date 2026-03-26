@@ -55,7 +55,7 @@ export default function FantasyMap() {
       >
         <FitBounds />
         <ImageOverlay
-          url="/images/snakefat_map.png"
+          url="/images/snakefat_map_empty.png"
           bounds={IMAGE_BOUNDS}
         />
         <MapMarkers onShow={showCard} onHide={hideCard} />

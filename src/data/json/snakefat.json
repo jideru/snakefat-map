@@ -8,7 +8,16 @@
       "id": 1,
       "name": "The Baron's estate",
       "description": "Crafting evocative OSE-style manor descriptionA modest stone manor crowned with a small watchtower, furnished with simple elegance and adorned with select artworks rather than ostentatious wealth. An adjoining guesthouse stands nearby, while the main residence houses all necessary chambers for living and receiving",
-      "position": [2290, 2202]
+      "position": [2290, 2202],      
+      "detailpage": {
+        "name": "The Baron's estate",
+        "Inhabitants": {
+          "The Baron": "A shrewd and pragmatic leader, known for his fair but firm governance of Snakefat. He resides in the manor with his family, including his daughter who is being tutored in magic by Tolvjen, the elder water-mage.",
+          "The Baron's daughter": "A young and curious girl, eager to learn the ways of magic under the guidance of Tolvjen, the elder water-mage."
+        },
+        "Description": "The Baron's estate is a modest stone manor that serves as the residence of the town's leader, the Baron. The manor is crowned with a small watchtower, providing a vantage point to oversee the town and its surroundings. The interior of the manor is furnished with simple elegance, featuring select artworks that reflect the Baron's appreciation for culture without being ostentatious. An adjoining guesthouse stands nearby, ready to accommodate visitors or guests of the Baron. The main residence includes all necessary chambers for living and receiving guests, making it a central hub for the town's social and political activities.",
+        "image": "baron_estate.png"
+      }
     },
     {
       "id": 2,
