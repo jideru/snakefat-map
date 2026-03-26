@@ -1,0 +1,138 @@
+:root {
+  --color-primary-dark: #4b2e13;
+  --color-darker: #2a1500;
+  --color-mid: #6b4c1b;
+  --color-light: #7a5630;
+  --color-bg-main: #f2ece0;
+  --color-bg-card: #fffaf2;
+  --color-border: #c8aa80;
+  --color-border-light: #e0cba8;
+  --color-accent: #ffe7a0;
+  --color-accent-bg: #f9f2e3;
+
+  --font-adventure: 'Pirata One', cursive, fantasy, serif;
+  --font-body: serif;
+
+  --radius-major: 14px;
+  --radius-section: 8px;
+  --radius-small: 6px;
+
+  --shadow-light: 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-medium: 0 6px 18px rgba(0,0,0,0.18);
+  --shadow-deep: 0 6px 32px rgba(0,0,0,0.12);
+
+  --spacing-base: 14px;
+  --spacing-large: 18px;
+  --spacing-gap: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1a1209;
+}
+
+/* ── Leaflet overrides ─────────────────────────────────────── */
+.leaflet-container {
+  background: #1a1209;
+  cursor: grab;
+}
+.leaflet-container:active {
+  cursor: grabbing;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+/* ── Transparent hit-zone over each baked-in marker ────────── */
+.marker-hit-zone {
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+/* ── HoverCard ─────────────────────────────────────────────── */
+.hover-card {
+  position: absolute;
+  z-index: 1000;
+  width: 300px;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(ellipse at 15% 20%, rgba(255,255,220,0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(180,140,60,0.15) 0%, transparent 50%),
+    linear-gradient(160deg, var(--color-bg-main) 0%, var(--color-bg-card) 60%, var(--color-accent-bg) 100%);
+
+  border: 2px solid var(--color-primary-dark);
+  border-radius: var(--radius-section);
+  padding: var(--spacing-base) var(--spacing-large) var(--spacing-large);
+
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 231, 160, 0.35);
+
+  animation: card-appear 0.15s ease-out;
+}
+
+@keyframes card-appear {
+  from { opacity: 0; transform: translateY(4px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+
+.hover-card::before,
+.hover-card::after {
+  content: '✦';
+  position: absolute;
+  font-size: 10px;
+  color: var(--color-border);
+  opacity: 0.6;
+}
+.hover-card::before { top: 5px; left:  8px; }
+.hover-card::after  { top: 5px; right: 8px; }
+
+.card-name {
+  font-family: var(--font-adventure);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-darker);
+  line-height: 1.2;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(200, 170, 128, 0.4);
+  padding-bottom: 8px;
+  text-shadow: 2px 2px 0 var(--color-accent), 0 2px 6px rgba(0,0,0,0.2);
+  letter-spacing: 0.04em;
+}
+
+.card-description {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-primary-dark);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ── Map wrapper ───────────────────────────────────────────── */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+

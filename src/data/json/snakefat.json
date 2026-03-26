@@ -1,0 +1,74 @@
+{
+  "name": "Snakefat",
+  "file": "snakefat_map.png",
+  "imageWidth": 3508,
+  "imageHeight": 2480,
+  "locations": [
+    {
+      "id": 1,
+      "name": "The Baron's estate",
+      "description": "Crafting evocative OSE-style manor descriptionA modest stone manor crowned with a small watchtower, furnished with simple elegance and adorned with select artworks rather than ostentatious wealth. An adjoining guesthouse stands nearby, while the main residence houses all necessary chambers for living and receiving",
+      "position": [2290, 2202]
+    },
+    {
+      "id": 2,
+      "name": "Militia house",
+      "description": "Elderly Thilma manages reception duties, the facilities include a bathing room, clothing stores, and a small holding cell for drunken locals. A massive taxidermied owlbear—slain by the captain's ancestor — stands in the guardhouse as a venerated relic. Captain Alric lives on premise",
+      "position": [1972, 1410]
+    },
+    {
+      "id": 3,
+      "name": "Druidic Stones",
+      "description": "Ancient standing stones ring the outskirts of town, their surfaces moss-covered and etched with symbols whose purpose has been lost to time. Local children dare each other to touch them after dark.",
+      "position": [2212, 650]
+    },
+    {
+      "id": 4,
+      "name": "The Wyrm yard (Workshop)",
+      "description": "A reinforced timber hall reeking of salt, blood, smoke, and blubber, with drainage grooves carved into floors perpetually slick with offal and lined with hooks, boilers, and sharpening stones. Staffed by scarred veterans and apprentices, the hall is currently closed as there is no Fathomwyrm to process, but the smell lingers in the air and the tools remain ready for the next catch.",
+      "position": [1676, 821]
+    },
+    {
+      "id": 5,
+      "name": "Oil Hall (Storage)",
+      "description": "A sturdy stone and timber warehouse and silo stands nearly emptied of its Fathomwyrm stores—only three barrels of oil, salted meat, scales, and massive bones remain before a trade caravan arrives at week's end to restock. Sergeant Seemaus, a loyal elderly guardian given the post by the Baron, sleeps within and keeps a bell at hand to raise the alarm.",
+      "position": [1342, 559]
+    },
+    {
+      "id": 6,
+      "name": "The Wick & Hook (General Store)",
+      "description": "Run by sharp-eyed widow Gulda, reeks of lamp oil, fish-gut soap, and damp rope—its shelves stocked with ropes, fishing spears, crossbows, oilskins, and rations, all arranged beneath the harpoon she claims gave the legendary One-Eye Snake its name. Goods are supplied without question or refund.",
+      "position": [834, 1328]
+    },
+    {
+      "id": 7,
+      "name": "The Grainhold",
+      "description": "The Old Church is a historic place of worship that has stood for centuries. It is known for its stunning architecture and rich history, making it a must-visit location for tourists and locals alike.",
+      "position": [1482, 1952]
+    },
+    {
+      "id": 8,
+      "name": "Chapel of Foam and Ice",
+      "description": "A seaside shrine dedicated to an Elemental Seadrake, where ritual offerings are made before ships depart and Father Delm—a middle-aged, intense priest—preaches the sea's duality of nourishment and destruction during sermons held fortnightly or upon sailors' request.",
+      "position": [1342, 1237]
+    },
+    {
+      "id": 9,
+      "name": "The Adventurer's Ale",
+      "description": "Newly built and fastly gaining popularity, this tavern is frequented by adventurers and locals alike. Known for its hearty meals, strong drinks, and lively atmosphere, it is a place where stories are shared and plans are made. It also helps that it is the only tavern and inn in town, making it a central hub for socializing and lodging.",
+      "position": [2236, 2754]
+    },
+    {
+      "id": 10,
+      "name": "The Old leaning tower",
+      "description": "An ancient stone tower tilts precariously to one side, now the home of Tolvjen, an elder water-mage with a long white beard. Dismissed from the tutelage of the Baron's daughter he now pursues his own magical theories. His cluttered study overflows with half-finished experiments and enchanted curiosities, and though absent-minded and sarcastic, he remains a patient—if distracted—instructor in the arcane arts.",
+      "position": [1884, 3363]
+    },
+    {
+      "id": 11,
+      "name": "The twin farms",
+      "description": "Small plots tended by extended families under the Baron's license yield onions, barley, and buttergreens alongside herds of chickens, goats, and pigs—providing a fifth of the town's provisions despite the region's meager soil.",
+      "position": [1082, 3076]
+    }
+  ]
+}
