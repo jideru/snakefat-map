@@ -145,6 +145,37 @@ body,
   height: 100%;
 }
 
+/* ── Map home button ────────────────────────────────────────── */
+.map-home-button {
+  position: absolute;
+  top: 16px;
+  left: 66px;
+  z-index: 1001;
+  width: auto;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 6px;
+  background: rgba(75, 46, 19, 0.95);
+  border: 2px solid var(--color-border);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-accent);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+}
+
+.map-home-button:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
 /* ── Clickable marker (detailpage) ─────────────────────────── */
 .marker-hit-zone--clickable {
   cursor: pointer !important;

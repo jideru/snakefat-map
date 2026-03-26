@@ -39,6 +39,7 @@ export default function FantasyMap() {
 
   return (
     <div className="map-wrapper">
+      <a href="https://snakefat-home.vercel.app/" className="map-home-button" target="_blank" rel="noopener noreferrer" title="Go to Snakefat home">Home</a>
       <MapContainer
         crs={L.CRS.Simple}
         bounds={IMAGE_BOUNDS}
