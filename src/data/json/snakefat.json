@@ -11,12 +11,39 @@
       "position": [2290, 2202],      
       "detailpage": {
         "name": "The Baron's estate",
-        "Inhabitants": {
-          "The Baron": "A shrewd and pragmatic leader, known for his fair but firm governance of Snakefat. He resides in the manor with his family, including his daughter who is being tutored in magic by Tolvjen, the elder water-mage.",
-          "The Baron's daughter": "A young and curious girl, eager to learn the ways of magic under the guidance of Tolvjen, the elder water-mage."
+        "The family": {
+          "Baron Uskewitz Coldheart (Oos-ke-fits)": "A regal patriarch of some sixty years, the Baron serves as Snakefat's ultimate judge and arbiter while delegating daily governance to his appointed mayor, Tomas Delveson.",
+          "Lady Mirema (Mir-Ma) Coldheart": "The Baron's grey-haired wife, once striking and stylish, now serves as the town's informal mediator while bearing the visible weight of grief from losing her son to the sea.",
+          "Sir Kaelen (Kay-lin) Coldheart": "The Baron's firstborn heir and captain of the Darkspire, lost when the ship vanished at sea. His loss is a source of deep sorrow for the family and town.",
+          "Lady Thessia (Tes-ya) Coldheart": "The Baron's only daughter and second-born child, gifted with the magical spark of Wind and Air, was trained by the mage Declan before Tolvjen to study at the Elemental College of Borussa.",
+          "Sir Garric (Gary-k) Coldheart": "The Baron's youngest son, a tall and lean intelligence of twenty-four years with scholarly training, oversees the town's trade and manages the export of Fathomwyrm goods.",
+          "Sir Maciten (Mace-ten) Eldran": "Lady Mirema's cousin and fifth son of his own noble house, he serves as keeper of the town records and remains a constant aide to Garric, rarely seen apart from him."
         },
         "Description": "The Baron's estate is a modest stone manor that serves as the residence of the town's leader, the Baron. The manor is crowned with a small watchtower, providing a vantage point to oversee the town and its surroundings. The interior of the manor is furnished with simple elegance, featuring select artworks that reflect the Baron's appreciation for culture without being ostentatious. An adjoining guesthouse stands nearby, ready to accommodate visitors or guests of the Baron. The main residence includes all necessary chambers for living and receiving guests, making it a central hub for the town's social and political activities.",
-        "image": "baron_estate.png"
+        "Recent Events": "Since the disappearance of the Darkspire and the loss of Sir Kaelen, the Baron's estate has been a place of mourning and reflection for the family. Baron Uskewitz has become more reclusive, and Lady Mirema while still trying to maintain her composure, has been deeply affected by the loss of her son. The estate has also become a place where the town's leaders gather to discuss matters of governance and strategy, especially in light of the challenges posed by the Fathomwyrm and the town's reliance on its resources. The sour and depressive atmosphere of the estate has been palpable, with the family struggling to cope with their grief while trying to maintain their responsibilities to the town. The whole town feels the weight of the Baron's loss, and it has cast a shadow over the community, affecting morale and the overall atmosphere of Snakefat.",
+        "images": [
+          {
+            "image": "baron_family.png",
+            "caption": "The Baron's family portrait, depicting Baron Uskewitz, Lady Mirema and all their children.",
+            "location": "left",
+            "canResize": true,
+            "rank": 2
+          },
+          {
+            "image": "baron_estate.png",
+            "caption": "The Baron's estate, a modest stone manor with an adjoining guesthouse.",
+            "location": "left",
+            "canResize": false,
+            "rank": 1
+          },
+          {
+            "image": "baron_estate_inside.png",
+            "caption": "A loosely based interpretation of the interior of the Baron's estate, showcasing its simple elegance and select artworks. This is not a correct map",
+            "location": "right",
+            "canResize": false,
+            "rank": 1
+          }
+        ]
       }
     },
     {

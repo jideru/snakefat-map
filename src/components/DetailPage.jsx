@@ -1,9 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { locations } from '../data/locations';
 
 export default function DetailPage() {
   const { id } = useParams();
   const location = locations.find((l) => String(l.id) === id);
+  const [expandedImage, setExpandedImage] = useState(null);
 
   if (!location || !location.detailpage) {
     return (
@@ -16,7 +18,26 @@ export default function DetailPage() {
     );
   }
 
-  const { name, image, ...rest } = location.detailpage;
+  const { name, images = [], ...rest } = location.detailpage;
+
+  // Separate and sort images by location
+  const leftImages = images
+    .filter((img) => img.location === 'left')
+    .sort((a, b) => a.rank - b.rank);
+
+  const rightImages = images
+    .filter((img) => img.location === 'right')
+    .sort((a, b) => a.rank - b.rank);
+
+  const handleImageClick = (img) => {
+    if (img.canResize) {
+      setExpandedImage(img);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setExpandedImage(null);
+  };
 
   return (
     <div className="detail-page">
@@ -27,16 +48,29 @@ export default function DetailPage() {
 
       <main className="detail-body">
         <div className="detail-content-row">
-          {image && (
-            <div className="detail-image-wrap">
-              <img
-                src={`/images/${image}`}
-                alt={name}
-                className="detail-image"
-              />
+          {/* Left Images Column */}
+          {leftImages.length > 0 && (
+            <div className="detail-images-column detail-images-left">
+              {leftImages.map((img, idx) => (
+                <div
+                  key={idx}
+                  className={`detail-image-container ${img.canResize ? 'detail-image-container--clickable' : ''}`}
+                  onClick={() => handleImageClick(img)}
+                >
+                  <img
+                    src={`/images/${img.image}`}
+                    alt={img.caption || name}
+                    className="detail-image"
+                  />
+                  {img.caption && (
+                    <div className="detail-image-caption">{img.caption}</div>
+                  )}
+                </div>
+              ))}
             </div>
           )}
 
+          {/* Text Sections Column */}
           <div className="detail-sections-col">
             {Object.entries(rest).map(([key, value]) => (
               <section key={key} className="detail-section">
@@ -56,8 +90,47 @@ export default function DetailPage() {
               </section>
             ))}
           </div>
+
+          {/* Right Images Column */}
+          {rightImages.length > 0 && (
+            <div className="detail-images-column detail-images-right">
+              {rightImages.map((img, idx) => (
+                <div
+                  key={idx}
+                  className={`detail-image-container ${img.canResize ? 'detail-image-container--clickable' : ''}`}
+                  onClick={() => handleImageClick(img)}
+                >
+                  <img
+                    src={`/images/${img.image}`}
+                    alt={img.caption || name}
+                    className="detail-image"
+                  />
+                  {img.caption && (
+                    <div className="detail-image-caption">{img.caption}</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </main>
+
+      {/* Expanded Image Modal */}
+      {expandedImage && (
+        <div className="image-modal-overlay" onClick={handleCloseModal}>
+          <div className="image-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="image-modal-close" onClick={handleCloseModal}>✕</button>
+            {expandedImage.caption && (
+              <div className="image-modal-caption">{expandedImage.caption}</div>
+            )}
+            <img
+              src={`/images/${expandedImage.image}`}
+              alt={expandedImage.caption || name}
+              className="image-modal-image"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
