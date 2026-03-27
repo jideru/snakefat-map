@@ -1,11 +1,16 @@
 import { useParams, Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { locations } from '../data/locations';
 
 export default function DetailPage() {
   const { id } = useParams();
   const location = locations.find((l) => String(l.id) === id);
   const [expandedImage, setExpandedImage] = useState(null);
+
+  useEffect(() => {
+    document.body.classList.add('detail-page-open');
+    return () => document.body.classList.remove('detail-page-open');
+  }, []);
 
   if (!location || !location.detailpage) {
     return (
